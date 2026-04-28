@@ -3605,3 +3605,4 @@ return(
 }
 
 export default App;
+if(typeof window !== “undefined”) window.App = App;
