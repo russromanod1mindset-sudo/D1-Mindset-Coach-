@@ -17,27 +17,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone@7.23.5/babel.min.js"></script>
-    <script>
-      Babel.registerPreset('custom', {
-        presets: [['env'], ['react']]
-      });
-    </script>
-    <script type="text/babel" data-presets="custom" src="/D1MindsetCoach.jsx"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        function tryRender() {
-          if (window.App && window.ReactDOM) {
-            const container = document.getElementById('root');
-            const root = ReactDOM.createRoot(container);
-            root.render(React.createElement(window.App));
-          } else {
-            setTimeout(tryRender, 200);
-          }
-        }
-        setTimeout(tryRender, 1000);
-      });
-    </script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
+</html>
